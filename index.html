@@ -29,21 +29,39 @@
     />
     <script defer src="app/js/main.js"></script>
     <link rel="stylesheet" href="app/styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="app/assets/images/icon-wo-bg.png"
+      type="image/x-icon"
+    />
     <title>Mapa De Calidad Del Aire</title>
   </head>
   <body>
-    <div id="map"></div>
-    <table id="myTable" class="display">
-      <thead>
-        <tr>
-          <th>Instituto</th>
-          <th>Contaminante</th>
-          <th>Valor</th>
-          <th>Unidad</th>
-          <th>Fecha</th>
-        </tr>
-      </thead>
-      <tbody id="myTbody"></tbody>
-    </table>
+    <header>
+      <div id="logo">
+        <a href="https://github.com/AnotherOne661"
+          ><img src="app/assets/images/icon-wo-bg.png" alt="Monke"
+        /></a>
+      </div>
+      <nav>
+        <div><h1>Mapa interactivo de calidad del aire</h1></div>
+      </nav>
+    </header>
+    <main>
+      <div id="map"></div>
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th>Instituto</th>
+            <th>Contaminante</th>
+            <th>Valor</th>
+            <th>Unidad</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="myTbody"></tbody>
+      </table>
+    </main>
+    <footer></footer>
   </body>
 </html>

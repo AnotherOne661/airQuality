@@ -1,4 +1,4 @@
-const API = "";
+const API = "7c395148d023122b6cb24925cdaee4ae";
 
 let clickCoor = "";
 let clickContaminantes;
@@ -53,22 +53,13 @@ async function displayDataTable() {
   });
 }
 
-function stringFrom(word) {
-  const baseWord = word;
-  let newWord = "";
-  for (let i = 7; i <= word.length - 2; i++) {
-    newWord += baseWord[i];
-  }
-  return newWord;
-}
-
 const tbody = document.querySelector("#myTbody");
 
 function addRow(institute, component, value, unit, date) {
   const tableRow = document.createElement("tr");
   tableRow.innerHTML = `
     <td>${institute}</td>
-    <td>${component}</td>
+    <td>${component.toUpperCase()}</td>
     <td>${value}</td>
     <td>${unit}</td>
     <td>${date}</td>
