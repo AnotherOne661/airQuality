@@ -47,11 +47,15 @@ async function obtenerComponentes(lat, lng) {
       `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lng}&appid=${API}`
     );
     const data = await response.json();
-    console.log(data);
-    return data.list[0].components;
+    if (data.list && data.list[0] && data.list[0].components) {
+      return data.list[0].components;
+    } else {
+      console.warn("No components data available:", data);
+      return {};
+    }
   } catch (error) {
     console.error("Error fetching air quality data:", error);
-    return [];
+    return {};
   }
 }
 
@@ -192,9 +196,11 @@ async function main() {
       console.error(`Error fetching data for ${marker.name}:`, error);
     }
   }
-  $(document).ready(() => {
-    $("#myTable").DataTable();
+  $('#myTable').DataTable({
+    dom: 'Bfrtip',
+    buttons: ['copy', 'excel', 'csv', 'pdf'],
   });
+  
 }
 
 main();

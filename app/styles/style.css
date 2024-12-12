@@ -18,7 +18,7 @@ body {
   #map {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 18px;
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 10em;
     display: flex;
     width: 85%;
     min-height: 25em;
