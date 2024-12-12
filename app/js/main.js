@@ -1,4 +1,4 @@
-const API = "7c395148d023122b6cb24925cdaee4ae";
+const API = "";
 
 let clickCoor = "";
 let clickContaminantes;
@@ -15,7 +15,15 @@ async function onMapClick(e) {
 
   clickContaminantes = await obtenerComponentes(latitude, longitude);
   let formattedContaminantes = JSON.stringify(clickContaminantes, null, 2);
-  const myPopup = new Popup({
+  Swal.fire({
+    title: "Las coordenadas seleccionadas poseeen:",
+    icon: "info",
+    text: formattedContaminantes,
+    iconColor: "#d9fc18",
+    color: "#d9fc18",
+    background: "#0e8114",
+  });
+  /*const myPopup = new Popup({
     id: "my-popup",
     title: `Se ha clickado en Latitud: ` + latitude + " Longitud: " + longitude,
     content:
@@ -30,7 +38,7 @@ async function onMapClick(e) {
     heightMultiplier: `0.2`,
   });
 
-  myPopup.show();
+  myPopup.show();*/
 }
 
 async function obtenerComponentes(lat, lng) {
