@@ -1,0 +1,316 @@
+const _0x17eac0 = _0x4821;
+(function (_0x38780b, _0x55be4f) {
+  const _0x166822 = _0x4821,
+    _0x1411d1 = _0x38780b();
+  while (!![]) {
+    try {
+      const _0x14fb1a =
+        (parseInt(_0x166822(0x19f)) / 0x1) *
+          (-parseInt(_0x166822(0x178)) / 0x2) +
+        -parseInt(_0x166822(0x1ca)) / 0x3 +
+        parseInt(_0x166822(0x1aa)) / 0x4 +
+        -parseInt(_0x166822(0x1c2)) / 0x5 +
+        -parseInt(_0x166822(0x18f)) / 0x6 +
+        (parseInt(_0x166822(0x196)) / 0x7) *
+          (-parseInt(_0x166822(0x191)) / 0x8) +
+        (parseInt(_0x166822(0x1b4)) / 0x9) * (parseInt(_0x166822(0x1bf)) / 0xa);
+      if (_0x14fb1a === _0x55be4f) break;
+      else _0x1411d1["push"](_0x1411d1["shift"]());
+    } catch (_0x2bb86a) {
+      _0x1411d1["push"](_0x1411d1["shift"]());
+    }
+  }
+})(_0x1b55, 0x6f382);
+const API = _0x17eac0(0x1ad);
+function _0x4821(_0x2adbac, _0x4f34b7) {
+  const _0x1b5559 = _0x1b55();
+  return (
+    (_0x4821 = function (_0x4821ac, _0x3941a3) {
+      _0x4821ac = _0x4821ac - 0x178;
+      let _0x56216b = _0x1b5559[_0x4821ac];
+      return _0x56216b;
+    }),
+    _0x4821(_0x2adbac, _0x4f34b7)
+  );
+}
+let clickCoor = "",
+  clickContaminantes;
+async function onMapClick(_0xc3fd4c) {
+  const _0x83d77b = _0x17eac0,
+    _0x3f605d = _0xc3fd4c[_0x83d77b(0x1c0)][_0x83d77b(0x1ba)]();
+  let _0x397239 = _0x3f605d[_0x83d77b(0x1b5)](",\x20");
+  console["log"](_0x397239);
+  const _0x5d5e5f = parseFloat(_0x397239[0x0][_0x83d77b(0x1a7)]("LatLng(", "")),
+    _0x5ac27b = parseFloat(_0x397239[0x1]["replace"](")", ""));
+  console[_0x83d77b(0x1cd)](
+    "Latitude:\x20" + _0x5d5e5f + ",\x20Longitude:\x20" + _0x5ac27b
+  ),
+    (clickContaminantes = await obtenerComponentes(_0x5d5e5f, _0x5ac27b));
+  let _0x54376e = JSON[_0x83d77b(0x18a)](clickContaminantes, null, 0x2);
+  Swal[_0x83d77b(0x18d)]({
+    title: _0x83d77b(0x185),
+    icon: _0x83d77b(0x1c5),
+    text: _0x54376e,
+    iconColor: _0x83d77b(0x19e),
+    color: "#d9fc18",
+    background: _0x83d77b(0x1be),
+  });
+}
+async function obtenerComponentes(_0x1cbe6a, _0x17b972) {
+  const _0x5120c1 = _0x17eac0;
+  try {
+    const _0x3ab2be = await fetch(
+        "https://api.openweathermap.org/data/2.5/air_pollution?lat=" +
+          _0x1cbe6a +
+          _0x5120c1(0x1c7) +
+          _0x17b972 +
+          _0x5120c1(0x184) +
+          API
+      ),
+      _0xb35d48 = await _0x3ab2be[_0x5120c1(0x1b0)]();
+    return _0xb35d48[_0x5120c1(0x1ab)] &&
+      _0xb35d48[_0x5120c1(0x1ab)][0x0] &&
+      _0xb35d48[_0x5120c1(0x1ab)][0x0][_0x5120c1(0x1a0)]
+      ? _0xb35d48[_0x5120c1(0x1ab)][0x0][_0x5120c1(0x1a0)]
+      : (console[_0x5120c1(0x1b9)](_0x5120c1(0x192), _0xb35d48), {});
+  } catch (_0x326f26) {
+    return console["error"](_0x5120c1(0x18e), _0x326f26), {};
+  }
+}
+function _0x1b55() {
+  const _0x459f90 = [
+    "&copy;\x20<a\x20href=\x22http://www.openstreetmap.org/copyright\x22>OpenStreetMap</a>",
+    "control",
+    "fire",
+    "Error\x20fetching\x20air\x20quality\x20data:",
+    "679644nbGSaW",
+    "pointer",
+    "46424CaUamu",
+    "No\x20components\x20data\x20available:",
+    "appendChild",
+    "create",
+    "IES\x20San\x20Isidoro\x20de\x20Sevilla",
+    "819EupRKd",
+    "#myTable",
+    "Tiles\x20&copy;\x20Esri\x20&mdash;\x20Source:\x20Esri,\x20i-cubed,\x20USDA,\x20USGS,\x20AEX,\x20GeoEye,\x20Getmapping,\x20Aerogrid,\x20IGN,\x20IGP,\x20UPR-EGP,\x20and\x20the\x20GIS\x20User\x20Community",
+    "coords",
+    "&copy;\x20<a\x20href=\x22https://www.openstreetmap.org/copyright\x22>OpenStreetMap</a>\x20contributors",
+    "padding",
+    "onclick",
+    "backgroundColor",
+    "#d9fc18",
+    "1735AzGilF",
+    "components",
+    "ready",
+    "name",
+    "DataTable",
+    "entries",
+    "marker",
+    "querySelector",
+    "replace",
+    "innerHTML",
+    "\x0a\x20\x20\x20\x20<td>",
+    "902732yxqBbL",
+    "list",
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "7c395148d023122b6cb24925cdaee4ae",
+    "toLocaleString",
+    "5px",
+    "json",
+    "popup",
+    "tileLayer",
+    "addTo",
+    "43704iuiKDo",
+    "split",
+    "zoom",
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    "#myTbody",
+    "warn",
+    "toString",
+    "5px\x2010px",
+    "Bfrtip",
+    "</td>\x0a\x20\x20",
+    "#0e8114",
+    "4250YPFgto",
+    "latlng",
+    "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "649690OtlaOr",
+    "Reset\x20View",
+    "https://api.openweathermap.org/data/2.5/air_pollution?lat=",
+    "info",
+    "DomUtil",
+    "&lon=",
+    "layers",
+    "&copy;\x20<a\x20href=\x22https://carto.com/attributions\x22>CartoDB</a>\x20contributors",
+    "283743MnVhHw",
+    "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+    "copy",
+    "log",
+    "cursor",
+    "942wfCjIG",
+    "csv",
+    "Map\x20data:\x20&copy;\x20<a\x20href=\x22https://opentopomap.org\x22>OpenTopoMap</a>\x20contributors",
+    "excel",
+    "IES\x20Ciudad\x20de\x20Los\x20Ángeles",
+    "reset-view-btn",
+    "Error\x20fetching\x20data\x20for\x20",
+    "bindPopup",
+    "white",
+    "createElement",
+    "center",
+    "</td>\x0a\x20\x20\x20\x20<td>",
+    "&appid=",
+    "Las\x20coordenadas\x20seleccionadas\x20poseeen:",
+    "style",
+    "2px\x20solid\x20gray",
+    "click",
+    "map",
+    "stringify",
+  ];
+  _0x1b55 = function () {
+    return _0x459f90;
+  };
+  return _0x1b55();
+}
+async function displayDataTable() {
+  const _0xcfaff4 = _0x17eac0;
+  $(document)[_0xcfaff4(0x1a1)](function () {
+    const _0x31e6fc = _0xcfaff4;
+    $("#myTable")[_0x31e6fc(0x1a3)]();
+  });
+}
+const tbody = document[_0x17eac0(0x1a6)](_0x17eac0(0x1b8));
+function addRow(_0xd89770, _0x252307, _0x1a63b6, _0x2e0e48, _0x502307) {
+  const _0x2c7b39 = _0x17eac0,
+    _0x53cb02 = document[_0x2c7b39(0x181)]("tr");
+  (_0x53cb02[_0x2c7b39(0x1a8)] =
+    _0x2c7b39(0x1a9) +
+    _0xd89770 +
+    "</td>\x0a\x20\x20\x20\x20<td>" +
+    _0x252307["toUpperCase"]() +
+    "</td>\x0a\x20\x20\x20\x20<td>" +
+    _0x1a63b6 +
+    _0x2c7b39(0x183) +
+    _0x2e0e48 +
+    _0x2c7b39(0x183) +
+    _0x502307 +
+    _0x2c7b39(0x1bd)),
+    tbody[_0x2c7b39(0x193)](_0x53cb02);
+}
+function processAirQualityData(_0x54e5f2, _0x2c03b9) {
+  const _0x598bc8 = _0x17eac0,
+    _0x1315f = _0x54e5f2["list"][0x0]["components"],
+    _0x209171 = new Date(_0x54e5f2[_0x598bc8(0x1ab)][0x0]["dt"] * 0x3e8)[
+      _0x598bc8(0x1ae)
+    ]();
+  for (const [_0x1a5000, _0x2b0906] of Object[_0x598bc8(0x1a4)](_0x1315f)) {
+    addRow(_0x2c03b9, _0x1a5000, _0x2b0906, "µg/m³", _0x209171);
+  }
+}
+async function main() {
+  const _0x155007 = _0x17eac0,
+    _0x21bafe = L[_0x155007(0x189)](_0x155007(0x189))["setView"](
+      [40.573942, -4.005455],
+      0xd
+    );
+  let _0x133a97;
+  _0x21bafe["on"](_0x155007(0x188), onMapClick);
+  const _0x874315 = L[_0x155007(0x1b1)](),
+    _0x3cc5d2 = L[_0x155007(0x1b2)](_0x155007(0x1c1), {
+      maxZoom: 0x13,
+      attribution: _0x155007(0x18b),
+    })["addTo"](_0x21bafe);
+  L["tileLayer"]("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 0x13,
+    attribution:
+      "&copy;\x20<a\x20href=\x22http://www.openstreetmap.org/copyright\x22>OpenStreetMap</a>",
+  })[_0x155007(0x1b3)](_0x21bafe);
+  const _0x1f6e23 = L[_0x155007(0x1b2)](_0x155007(0x1ac), {
+      attribution: _0x155007(0x19a),
+    }),
+    _0x35eb18 = L["tileLayer"](_0x155007(0x1cb), {
+      attribution: _0x155007(0x17a),
+    }),
+    _0x5871c7 = L["tileLayer"](_0x155007(0x1b7), {
+      attribution: _0x155007(0x198),
+    }),
+    _0x49df6a = L["tileLayer"](
+      "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+      { attribution: _0x155007(0x1c9) }
+    );
+  _0x1f6e23[_0x155007(0x1b3)](_0x21bafe);
+  const _0x113c1c = {
+      "Satellite\x20View": _0x1f6e23,
+      Topography: _0x35eb18,
+      "Esri\x20Satellite": _0x5871c7,
+      "Dark\x20Theme": _0x49df6a,
+    },
+    _0x42aa03 = { center: [40.573942, -4.005455], zoom: 0xa },
+    _0x460931 = L[_0x155007(0x18c)]({ position: "bottomleft" });
+  (_0x460931["onAdd"] = function () {
+    const _0x470ed8 = _0x155007,
+      _0x477e1b = L[_0x470ed8(0x1c6)][_0x470ed8(0x194)](
+        "button",
+        _0x470ed8(0x17d)
+      );
+    return (
+      (_0x477e1b["innerHTML"] = _0x470ed8(0x1c3)),
+      (_0x477e1b[_0x470ed8(0x186)][_0x470ed8(0x19d)] = _0x470ed8(0x180)),
+      (_0x477e1b["style"]["border"] = _0x470ed8(0x187)),
+      (_0x477e1b["style"]["borderRadius"] = _0x470ed8(0x1af)),
+      (_0x477e1b[_0x470ed8(0x186)][_0x470ed8(0x19b)] = _0x470ed8(0x1bb)),
+      (_0x477e1b["style"][_0x470ed8(0x1ce)] = _0x470ed8(0x190)),
+      (_0x477e1b[_0x470ed8(0x19c)] = function () {
+        const _0x2eca6d = _0x470ed8;
+        _0x21bafe["setView"](
+          _0x42aa03[_0x2eca6d(0x182)],
+          _0x42aa03[_0x2eca6d(0x1b6)]
+        );
+      }),
+      _0x477e1b
+    );
+  }),
+    _0x460931[_0x155007(0x1b3)](_0x21bafe),
+    L[_0x155007(0x18c)]
+      [_0x155007(0x1c8)](_0x113c1c)
+      [_0x155007(0x1b3)](_0x21bafe);
+  const _0x581dc6 = [
+    { coords: [40.582884, -4.011464], name: "IES\x20Infanta\x20Elena" },
+    { coords: [40.378052, -3.656922], name: "IES\x20Madrid\x20Sur" },
+    { coords: [40.444775, -3.719944], name: _0x155007(0x195) },
+    { coords: [40.352739, -3.696325], name: _0x155007(0x17c) },
+    { coords: [40.439698, -3.65676], name: "IES\x20Salvador\x20Dalí" },
+  ];
+  _0x581dc6["forEach"]((_0x3d993c) => {
+    const _0x5112bc = _0x155007,
+      _0x4a7bd0 = L[_0x5112bc(0x1a5)](_0x3d993c[_0x5112bc(0x199)])["addTo"](
+        _0x21bafe
+      );
+    _0x4a7bd0[_0x5112bc(0x17f)](_0x3d993c[_0x5112bc(0x1a2)]);
+  });
+  for (const _0x21f887 of _0x581dc6) {
+    try {
+      const _0x2c50cc = await fetch(
+          _0x155007(0x1c4) +
+            _0x21f887["coords"][0x0] +
+            _0x155007(0x1c7) +
+            _0x21f887["coords"][0x1] +
+            _0x155007(0x184) +
+            API
+        ),
+        _0x5957b0 = await _0x2c50cc[_0x155007(0x1b0)]();
+      processAirQualityData(_0x5957b0, _0x21f887[_0x155007(0x1a2)]);
+    } catch (_0x18c254) {
+      console["error"](
+        _0x155007(0x17e) + _0x21f887[_0x155007(0x1a2)] + ":",
+        _0x18c254
+      );
+    }
+  }
+  $(_0x155007(0x197))[_0x155007(0x1a3)]({
+    dom: _0x155007(0x1bc),
+    buttons: [_0x155007(0x1cc), _0x155007(0x17b), _0x155007(0x179), "pdf"],
+    responsive: !![],
+  });
+}
+main();
