@@ -23,22 +23,6 @@ async function onMapClick(e) {
     color: "#d9fc18",
     background: "#0e8114",
   });
-  /*const myPopup = new Popup({
-    id: "my-popup",
-    title: `Se ha clickado en Latitud: ` + latitude + " Longitud: " + longitude,
-    content:
-      ` Se han encontrado los siguientes datos
-        ` + formattedContaminantes,
-    fadeTime: `0.3s`,
-    backgroundColor: `#77DD77`,
-    titleColor: `#ffffff`,
-    textColor: `#ffee8c`,
-    closeColor: `#ffffff`,
-    widthMultiplier: `0.5`,
-    heightMultiplier: `0.2`,
-  });
-
-  myPopup.show();*/
 }
 
 async function obtenerComponentes(lat, lng) {
@@ -196,11 +180,11 @@ async function main() {
       console.error(`Error fetching data for ${marker.name}:`, error);
     }
   }
-  $('#myTable').DataTable({
-    dom: 'Bfrtip',
-    buttons: ['copy', 'excel', 'csv', 'pdf'],
+  $("#myTable").DataTable({
+    dom: "Bfrtip",
+    buttons: ["copy", "excel", "csv", "pdf"],
+    responsive: true,
   });
-  
 }
 
 main();
